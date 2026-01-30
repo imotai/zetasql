@@ -6545,8 +6545,8 @@ TEST_P(DeserializeInvalidRangesTest, InvalidRangeValuesFail) {
   ValueProto value_proto;
   absl::StatusOr<Value> status_or_value;
   const InvalidRangeTestCase& param = GetParam();
-  // Convert to std::string. ZetaSQL doesn't like if we pass absl::string_view
-  // into ParseFromString directly.
+  // Convert to std::string. GoogleSQL OSS doesn't like if we pass
+  // absl::string_view into ParseFromString directly.
   const std::string value_text_proto(param.value_text_proto);
   ABSL_QCHECK(google::protobuf::TextFormat::ParseFromString(value_text_proto, &value_proto));
   status_or_value = Value::Deserialize(value_proto, param.range_type);

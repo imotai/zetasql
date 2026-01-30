@@ -1225,8 +1225,8 @@ class TreeGenerator():
         logging.fatal(
             'Input file name must end with ".template". Saw: input=%s', in_path
         )
-      # TODO: b/388324854 - Apply with `str.removesuffix()` once ZetaSQL Python
-      # version is updated.
+      # TODO: b/388324854 - Apply with `str.removesuffix()` once GoogleSQL OSS
+      # Python version is updated.
       in_no_suffix = os.path.basename(in_path)[:-9]
       in_prefix, in_extension = in_no_suffix.rsplit('.')
       out_basename = os.path.basename(out_path)

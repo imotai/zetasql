@@ -92,8 +92,8 @@ template <typename T>
 void UnalignedLoadAndAugmentPtr(T* value, const char** data) {
   // Note that the whole if-else block can be simplified to the following:
   // *value = googlesql_base::LittleEndian::Load<T>(*data);
-  // Unfortunately, the opensource version, Zetasql, does not have the generic
-  // Load<T> function. That's why Load32 and Load64 functions are used.
+  // Unfortunately, GoogleSQL OSS does not have the generic Load<T> function.
+  // That's why Load32 and Load64 functions are used.
   if constexpr (std::is_same_v<T, int32_t> || std::is_same_v<T, uint32_t>) {
     *value = static_cast<T>(googlesql_base::LittleEndian::Load32(*data));
   } else {

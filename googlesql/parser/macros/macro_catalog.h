@@ -71,7 +71,8 @@ struct MacroInfo {
     return body_location.GetTextFrom(source_text);
   }
 
-  // TODO: b/310027386 - Use default == operator once ZetaSQL builds with C++20.
+  // TODO: b/310027386 - Use default == operator once GoogleSQL OSS builds with
+  // C++20.
   friend bool operator==(const MacroInfo& lhs, const MacroInfo& rhs) {
     return lhs.source_text == rhs.source_text && lhs.location == rhs.location &&
            lhs.name_location == rhs.name_location &&

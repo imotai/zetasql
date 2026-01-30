@@ -41,8 +41,8 @@ ABSL_CONST_INIT std::string *log_file_directory = nullptr;
 // The log filename.
 ABSL_CONST_INIT std::string *log_basename = nullptr;
 
-// The ZETASQL_VLOG level, only ZETASQL_VLOG with level equal to or below this
-// level is logged.
+// The GOOGLESQL_VLOG level, only GOOGLESQL_VLOG with level equal to or below
+// this level is logged.
 ABSL_CONST_INIT int vlog_level = 0;
 
 const char *GetBasename(const char *file_path) {
@@ -102,9 +102,8 @@ bool set_log_directory(const std::string &log_directory) {
   return true;
 }
 
-// Sets the verbosity threshold for ZETASQL_VLOG. A ZETASQL_VLOG command with a
-// level greater
-// than this will be ignored.
+// Sets the verbosity threshold for GOOGLESQL_VLOG. A GOOGLESQL_VLOG command
+// with a level greater than this will be ignored.
 //
 // level: verbosity threshold for GOOGLESQL_VLOG to be set. A GOOGLESQL_VLOG command with
 //        level less than or equal to this will be logged.

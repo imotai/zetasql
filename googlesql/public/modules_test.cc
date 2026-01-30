@@ -1997,7 +1997,7 @@ Select * from foo;
 )";
   GOOGLESQL_ASSERT_OK(CreateModuleCatalog({"m"}, "alias", &module_contents));
 
-  // TODO: Fix ZetaSQL error location output.
+  // TODO: Fix GoogleSQL OSS error location output.
   const std::string unsupported_statement_error =
       "INVALID_ARGUMENT: Unsupported statement kind: QueryStatement "
       "[type.googleapis.com/googlesql.ErrorLocation='\\x08\\x08\\x10\\x01\\x1a"

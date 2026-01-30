@@ -256,7 +256,7 @@ inline void UnalignedStore64(void *p, uint64_t v) { memcpy(p, &v, sizeof v); }
 
 #else
 
-// ZETASQL_INTERNAL_NEED_ALIGNED_LOADS is defined when the underlying platform
+// GOOGLESQL_INTERNAL_NEED_ALIGNED_LOADS is defined when the underlying platform
 // doesn't support unaligned access.
 #define GOOGLESQL_INTERNAL_NEED_ALIGNED_LOADS
 

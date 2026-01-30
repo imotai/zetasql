@@ -5,7 +5,7 @@
 # Reference
 
 The topics in this section provide the reference information you need to work
-with ZetaSQL:
+with GoogleSQL:
 
 * [Lexical Structure and Syntax](lexical.md)
 * [Expressions, Functions, and Operators](functions-and-operators.md)

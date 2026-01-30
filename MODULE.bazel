@@ -19,7 +19,7 @@ module(
     version = "2026.01.1",
 )
 
-ZETASQL_JAVA_ARTIFACTS = [
+GOOGLESQL_JAVA_ARTIFACTS = [
     "com.google.api.grpc:proto-google-common-protos:2.29.0",
     "com.google.code.findbugs:jsr305:3.0.2",
     "com.google.errorprone:error_prone_annotations:2.23.0",
@@ -91,7 +91,7 @@ single_version_override(
 # Java dependencies.
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
-    artifacts = ZETASQL_JAVA_ARTIFACTS,
+    artifacts = GOOGLESQL_JAVA_ARTIFACTS,
     generate_compat_repositories = True,
 )
 use_repo(maven, "maven")

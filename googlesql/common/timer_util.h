@@ -95,7 +95,7 @@ class ElapsedTimer {
 // properties:
 //  - Coupled with the type returned to MakeTimerStarted, this allows
 //    complete abstraction of the actual type of the timer. This helpful
-//    to allow different types internally and in ZetaSQL.
+//    to allow different types internally and in GoogleSQL OSS.
 //  - Helpful Accumulate methods.
 class TimedValue {
  public:

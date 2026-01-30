@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-# ZetaSQL requires c++20 support to match internal Google development
+# GoogleSQL requires c++20 support to match internal Google development
 # environments.
 # This is a special snowflake setting that bazel requires special handling for.
 
@@ -58,7 +58,7 @@ build:g++ --cxxopt=-Wno-stringop-truncation
 # Specify the minimum supported version of macOS.
 build:darwin --cxxopt="-mmacosx-version-min=11.0"
 
-# C++20 is required to build ZetaSQL, hence `-cxxopt=-std=c++20`. On MacOS
+# C++20 is required to build GoogleSQL, hence `-cxxopt=-std=c++20`. On MacOS
 # `--host_cxxopt=-std=c++20` is also needed.
 # "--java_runtime_version=remotejdk_11": to make the build more hermetic.
 build --cxxopt=-std=c++20 --host_cxxopt=-std=c++20 --config=clang --java_runtime_version=remotejdk_11
